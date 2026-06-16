@@ -1,0 +1,36 @@
+const students=[
+    {
+        regno:"101",
+        name:"Aashiha",
+        dept:"CS",
+        year:"II",
+        subjects:[
+            {name:"WAD",mark:90},
+            {name:"AI",mark:92},
+            {name:"DS",mark:95}
+        ]
+    },
+    {
+        regno:"102",
+        name:"Dharshini",
+        dept:"AD",
+        year:"II",
+        subjects:[
+            {name:"WAD",mark:95},
+            {name:"AI",mark:90},
+            {name:"DS",mark:92}
+        ]
+    },
+    {
+        regno:"103",
+        name:"Lakshmi",
+        dept:"IT",
+        year:"II",
+        subjects:[
+            {name:"WAD",mark:90},
+            {name:"AI",mark:92},
+            {name:"DS",mark:95}
+        ]
+    }
+]
+export default students;

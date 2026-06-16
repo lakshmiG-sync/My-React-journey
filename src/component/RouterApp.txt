@@ -1,0 +1,54 @@
+import React from 'react'
+import './App.css'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import Bikes from './component/Bikes'
+import Car1 from './component/Car1'
+function App() {
+  return (
+    <>
+    <Router>
+      <nav>
+        <NavLink to="/">Bikes </NavLink>
+        <NavLink to="/car">Cars</NavLink>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Bikes/>}/>
+        <Route path='/car' element={<Car1/>}/>
+      </Routes>
+    </Router>
+    </>
+  )
+}
+
+export default App
+
+import React from 'react'
+import './App.css'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import FoodOrderFront from './component/FoodOrderFront';
+import Offers from './component/Offers';
+import Burgers from './component/Burgers';
+import Fries from './component/Fries';
+import Cokes from './component/Cokes';
+function App() {
+  return (
+    <>
+    <Router>
+      <nav style={{backgroundColor:"rgb(239, 144, 19)",padding:"15px",margin:"10px 0px",display:"flex",flexDirection:"row", justifyContent:"space-around"}}>
+        <NavLink style={{backgroundColor:"black",width:"80px",padding:"3px",color:"white",fontWeight:"bold",borderRadius:"20px",fontSize:"13px",textDecoration:"none"}} to="/">Offers</NavLink>
+        <NavLink style={{backgroundColor:"black",width:"80px",padding:"3px",color:"white",fontWeight:"bold",borderRadius:"20px",fontSize:"13px",textDecoration:"none"}} to="/burgers">Burgers</NavLink>
+        <NavLink style={{backgroundColor:"black",width:"80px",padding:"3px",color:"white",fontWeight:"bold",borderRadius:"20px",fontSize:"13px",textDecoration:"none"}} to="/fries">Fries</NavLink>
+        <NavLink style={{backgroundColor:"black",width:"80px",padding:"3px",color:"white",fontWeight:"bold",borderRadius:"20px",fontSize:"13px",textDecoration:"none"}} to="/cooldrinks">Cool Drinks</NavLink>
+      </nav>
+      <Routes>
+        <Route path='/' element={<Offers/>}/>
+        <Route path='/burgers' element={<Burgers/>}/>
+        <Route path='/fries' element={<Fries/>}/>
+        <Route path='/cooldrinks' element={<Cokes/>}/>
+      </Routes>
+    </Router>
+    </>
+  )
+}
+
+export default App
