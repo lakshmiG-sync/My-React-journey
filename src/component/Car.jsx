@@ -1,5 +1,14 @@
-import React from 'react'
+import React,{useState} from 'react'
 import bmw from '../assets/bmw.jpg'
+function Button() {
+    const[count,setCount]=useState(0)
+  return (
+    <div>
+        <p>Count:{count}</p>
+        <button onClick={()=>setCount(count+1)}>👌</button>
+    </div>
+  )
+}
 function Car() {
   const car={
         name:"BMW",
@@ -18,4 +27,4 @@ function Car() {
   )
 }
 
-export default Car
+export {Car,Button}

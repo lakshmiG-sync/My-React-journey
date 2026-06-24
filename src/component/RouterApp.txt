@@ -52,3 +52,13 @@ function App() {
 }
 
 export default App
+
+<Router>
+        <nav>
+            <NavLink to='/'></NavLink>
+        </nav>
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/result/:regno' element={<Result/>}/>
+        </Routes>
+      </Router>
